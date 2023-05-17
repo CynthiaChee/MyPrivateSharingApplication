@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <ImageView
+        android:id="@+id/orderDetailsImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Image"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@drawable/person_icon"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/senderTextView"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:text="From sender username"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderDetailsImage"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/orderPickUpDetails"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:text="Pickup details"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senderTextView"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/orderReceiverText"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:text="To receiver username"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderPickUpDetails"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <TextView
+        android:id="@+id/orderDropOffDetails"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Drop-off details"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderReceiverText"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/goodDescText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Goods Description"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderDropOffDetails"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <TextView
+        android:id="@+id/goodWeightTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Weight (kg)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodDescText"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/goodTypeTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Type"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goodWeightTextView"
+        app:layout_constraintTop_toBottomOf="@+id/goodDescText"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/goodWidthTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Width (cm)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodWeightTextView"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/goodHeightTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Height (cm)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/goodWidthTextView"
+        app:layout_constraintTop_toBottomOf="@+id/goodTypeTextView"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/goodLengthTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Length (cm)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodWidthTextView"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/goodQuantityTextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Quantity"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goodLengthTextView"
+        app:layout_constraintTop_toBottomOf="@+id/goodHeightTextView"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <Button
+        android:id="@+id/getEstimateButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Get Estimate"
+        android:backgroundTint="#0026E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goodLengthTextView"
+        app:layout_constraintVertical_bias="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

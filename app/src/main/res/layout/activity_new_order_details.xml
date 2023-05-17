@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewOrderDetailsActivity">
+
+    <ScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newOrderDetailsScrollConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/goodTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:text="Good Type:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.043" />
+
+            <RadioGroup
+                android:id="@+id/goodTypeRadioGroup"
+                android:layout_width="292dp"
+                android:layout_height="237dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.267"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodTypeText"
+                app:layout_constraintVertical_bias="0.031">
+
+                <RadioButton
+                    android:id="@+id/furnitureButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Furniture" />
+
+                <RadioButton
+                    android:id="@+id/dryGoodsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Dry goods" />
+
+                <RadioButton
+                    android:id="@+id/foodButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Food" />
+
+                <RadioButton
+                    android:id="@+id/buildingMaterialButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Building material" />
+
+                <RadioButton
+                    android:id="@+id/otherGoodsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:minHeight="48dp"
+                    android:text="Other (please specify)"
+                    tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/otherGoodsEdit"
+                android:layout_width="255dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:hint="Other"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.214"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodTypeRadioGroup"
+                app:layout_constraintVertical_bias="0.03"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/weightDimensionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight and Dimensions:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.201"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/otherGoodsEdit"
+                app:layout_constraintVertical_bias="0.09" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="132dp"
+                android:layout_height="48dp"
+                android:background="@drawable/grey_input_border"
+                android:ems="10"
+                android:hint="Weight (kg)"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weightDimensionsText"
+                app:layout_constraintVertical_bias="0.036" />
+
+            <EditText
+                android:id="@+id/widthEditText"
+                android:layout_width="132dp"
+                android:layout_height="48dp"
+                android:background="@drawable/grey_input_border"
+                android:ems="10"
+                android:hint="Width (cm)"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.267"
+                app:layout_constraintStart_toEndOf="@+id/weightEditText"
+                app:layout_constraintTop_toBottomOf="@+id/weightDimensionsText"
+                app:layout_constraintVertical_bias="0.036" />
+
+            <EditText
+                android:id="@+id/lengthEditText"
+                android:layout_width="132dp"
+                android:layout_height="48dp"
+                android:background="@drawable/grey_input_border"
+                android:ems="10"
+                android:hint="Length (cm)"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weightEditText"
+                app:layout_constraintVertical_bias="0.025" />
+
+            <EditText
+                android:id="@+id/quantityEditText"
+                android:layout_width="132dp"
+                android:layout_height="48dp"
+                android:background="@drawable/grey_input_border"
+                android:ems="10"
+                android:hint="Quantity"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lengthEditText"
+                app:layout_constraintVertical_bias="0.025" />
+
+            <EditText
+                android:id="@+id/heightEditText"
+                android:layout_width="132dp"
+                android:layout_height="48dp"
+                android:background="@drawable/grey_input_border"
+                android:ems="10"
+                android:hint="Height (cm)"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColorHint="#8E8E8E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintStart_toEndOf="@+id/lengthEditText"
+                app:layout_constraintTop_toBottomOf="@+id/widthEditText"
+                app:layout_constraintVertical_bias="0.022" />
+
+            <TextView
+                android:id="@+id/vehicleTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Type:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.118"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quantityEditText"
+                app:layout_constraintVertical_bias="0.134" />
+
+            <RadioGroup
+                android:id="@+id/vehicleTypeRadioGroup"
+                android:layout_width="279dp"
+                android:layout_height="246dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.269"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicleTypeText"
+                app:layout_constraintVertical_bias="0.205">
+
+                <RadioButton
+                    android:id="@+id/truckButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Truck" />
+
+                <RadioButton
+                    android:id="@+id/vanButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Van" />
+
+                <RadioButton
+                    android:id="@+id/refridgeratedTruckButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Refridgerated truck" />
+
+                <RadioButton
+                    android:id="@+id/miniTruckButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Mini-truck" />
+
+                <RadioButton
+                    android:id="@+id/otherVehicleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other (please specify)" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/otherVehicleEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Other"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.198"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicleTypeRadioGroup"
+                app:layout_constraintVertical_bias="0.03" />
+
+            <Button
+                android:id="@+id/createOrderButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#0056FF"
+                android:text="Create Order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/otherVehicleEdit" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

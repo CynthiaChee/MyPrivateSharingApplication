@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewOrderActivity">
+
+    <TextView
+        android:id="@+id/receiverNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receiver Name:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <EditText
+        android:id="@+id/receiverNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Receiver Name"
+        android:textColorHint="#6969E3"
+        android:background="@drawable/input_border"
+        android:paddingLeft="10dp"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/receiverNameText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/pickupDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup Date:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiverNameText"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <CalendarView
+        android:id="@+id/pickupCalendarView"
+        android:layout_width="339dp"
+        android:layout_height="298dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiverNameEdit"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/pickupTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup time:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/pickUpTimePicker"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickupCalendarView"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TimePicker
+        android:id="@+id/pickUpTimePicker"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toEndOf="@id/pickupTimeText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <TextView
+        android:id="@+id/pickupLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup location:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickupTimeText"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <EditText
+        android:id="@+id/pickupLocationEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Pickup Location"
+        android:textColorHint="#6969E3"
+        android:background="@drawable/input_border"
+        android:paddingLeft="10dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/pickupLocationText"
+        app:layout_constraintTop_toBottomOf="@+id/pickUpTimePicker"
+        app:layout_constraintVertical_bias="0.054"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/dropOffLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drop-off location:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickupLocationText"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <EditText
+        android:id="@+id/dropOffLocationEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Drop-off Location"
+        android:textColorHint="#6969E3"
+        android:background="@drawable/input_border"
+        android:paddingLeft="10dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/pickupLocationText"
+        app:layout_constraintTop_toBottomOf="@+id/pickupLocationEdit"
+        app:layout_constraintVertical_bias="0.054"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/orderNextButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropOffLocationEdit"
+        app:layout_constraintVertical_bias="0.45"
+        android:backgroundTint="#0026E4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
